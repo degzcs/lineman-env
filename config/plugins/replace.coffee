@@ -8,7 +8,7 @@ module.exports = (lineman) ->
         app: ['dist/replaced/app.coffee', 'dist/replaced/**/*.coffee'] # files to convert
 
     dist: js:
-      concatenated:'dist/js/app.js' #file to uglifly
+      concatenated:'dist/js/app.concated.js' #file to uglifly
 
   config:
 
@@ -34,7 +34,7 @@ module.exports = (lineman) ->
 
     prependTasks:
       common: ['replace:dev'].concat(lineman.config.application.prependTasks.common)
-      dist: ['replace:dist', 'concat_sourcemap:dist_js'].concat(lineman.config.application.prependTasks.dist)
+      dist: ['replace:dist', 'coffee:compile', 'concat_sourcemap:dist_js'].concat(lineman.config.application.prependTasks.dist)
 
     # development
     replace:
