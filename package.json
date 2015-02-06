@@ -1,0 +1,23 @@
+{
+  "name": "lineman-env",
+  "version": "0.0.1",
+  "description": "useful to set up environment variables",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego F. Gomez",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-replace": "^0.8.0"
+  },
+  "peerDependencies": {
+    "lineman": ">= 0.35.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://mit-license.org"
+    }
+  ]
+}
