@@ -1,12 +1,17 @@
 {
   "name": "lineman-env",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "useful to set up environment variables",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Diego F. Gomez",
+  "author": {"name":"Diego F. Gomez",
+  "email": "diego.f.gomez.pardo@gmail.com"},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/degzcs/lineman-env"
+  },
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-replace": "^0.8.0"
