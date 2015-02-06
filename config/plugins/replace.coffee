@@ -1,14 +1,18 @@
 module.exports = (lineman) ->
 
+  files:
+    coffee:
+      app: ['generated/replaced/app.coffee', 'generated/replaced/**/*.coffee']
+
   config:
     loadNpmTasks: lineman.config.application.loadNpmTasks.concat("grunt-replace")
 
-    prependTasks: 
+    prependTasks:
       common: ['replace:dev'].concat(lineman.config.application.prependTasks.common)
       dist: ['replace:dist'].concat(lineman.config.application.prependTasks.dist)
 
     # development
-    replace: 
+    replace:
       dev:
         options: patterns: [ {
           json: lineman.grunt.file.readJSON('config/environments/development.json')
