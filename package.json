@@ -1,6 +1,6 @@
 {
   "name": "lineman-env",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "useful to set up environment variables",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "grunt-replace": "^0.8.0"
   },
   "peerDependencies": {
-    "lineman": ">= 0.35.0"
+    "lineman": ">= 0.34.0"
   },
   "licenses": [
     {
