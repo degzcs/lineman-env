@@ -1,6 +1,6 @@
 {
   "name": "lineman-env",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "useful to set up environment variables",
   "main": "index.js",
   "scripts": {

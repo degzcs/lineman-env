@@ -1,5 +1,6 @@
 module.exports = (lineman) ->
 
+#new file path
   files:
     coffee:
       app: ['generated/replaced/app.coffee', 'generated/replaced/**/*.coffee'] # order coffee compilation
@@ -10,8 +11,8 @@ module.exports = (lineman) ->
     dist: js:
       concatenated:'dist/js/app.concated.js' #file to uglifly
 
+# Cofiguration tasks
   config:
-
     coffee:
       compile:
         files: "<%= files.coffee.dist.generated %>": "<%= files.coffee.dist.app %>" # add compile coffee configuration
@@ -24,6 +25,11 @@ module.exports = (lineman) ->
           '<%= files.js.app %>'
           '<%= files.ngtemplates.dest %>'
         ]
+        dest: "<%= files.dist.js.concatenated %>"
+
+    ngAnnotate:
+      js:
+        src: "<%= files.dist.js.concatenated %>",
         dest: "<%= files.dist.js.concatenated %>"
 
     uglify:
